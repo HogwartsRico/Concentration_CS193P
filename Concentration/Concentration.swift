@@ -2,7 +2,7 @@
 //  Concentration.swift
 //  Concentration
 //
-//  Created by 陈宏杰 on 2019/4/8.
+//  Created by rico on 2019/4/8.
 //  Copyright © 2019 Rico. All rights reserved.
 //这也是一个Model Card也是一个Model
 //这个类是这个游戏中最重要的一个类，声明了它用到的一些Model，api方法等 

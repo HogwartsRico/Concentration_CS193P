@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Concentration
 //
-//  Created by 陈宏杰 on 2019/4/6.
+//  Created by rico on 2019/4/6.
 //  Copyright © 2019 Rico. All rights reserved.
 //这是个ViewController,MVC中的Controller
 

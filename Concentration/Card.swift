@@ -2,7 +2,7 @@
 //  Card.swift
 //  Concentration
 //
-//  Created by 陈宏杰 on 2019/4/8.
+//  Created by rico on 2019/4/8.
 //  Copyright © 2019 Rico. All rights reserved.
 //这是一个Model,它是Struct,不是class
 

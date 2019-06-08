@@ -18,6 +18,11 @@ class ViewController: UIViewController {//它继承了UIVIewController
     
     @IBOutlet var cardButtons: [UIButton]!
     
+    @IBAction func reset(_ sender: UIButton) {
+        emojiDictionary.removeAll();//清空dictionary
+        game.reset();
+        updateViewByModel()
+    }
     
     //var emojiChoices:Array<String>=["🎃","👻","🎃","👻"];
     private var emojiChoices = ["👻","🎃","😈","💀","🤡","🤖","🦇","👽"]

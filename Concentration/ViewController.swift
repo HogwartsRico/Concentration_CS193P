@@ -23,7 +23,7 @@ class ViewController: UIViewController {//它继承了UIVIewController
     private var emojiChoices = ["👻","🎃","😈","💀","🤡","🤖","🦇","👽"]
     //private var emojiChoices = "👻🎃😈💀🤡🤖🦇👽"
     
-    var emoji = Dictionary<Int,String>(); //Dictionary类似于hashmap的东西
+    var emojiDictionary = Dictionary<Int,String>(); //Dictionary类似于hashmap的东西
     //var emoji = [Int:String]();//定义字典的另一种方式
     
     /**
@@ -72,14 +72,14 @@ class ViewController: UIViewController {//它继承了UIVIewController
          return "?";
          };*/
        
-        if(emoji[card.identifier] == nil){ //如果根据card的identifier到Dictionary中找不到，就添加进去 ,如果某个card已经添加过了,然后再来一个和那个card相同identifier的card(图案相同)是不会进if里面的
+        if(emojiDictionary[card.identifier] == nil){ //如果根据card的identifier到Dictionary中找不到，就添加进去 ,如果某个card已经添加过了,然后再来一个和那个card相同identifier的card(图案相同)是不会进if里面的
             print("card.identifier:\(card.identifier)")
             if(emojiChoices.count>0){//如果里面还有
                 let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)));
-                emoji[card.identifier] = emojiChoices.remove(at: randomIndex);//remove at会返回这个移除的元素 这段逻辑相当于是随机消费上面那一串emoji表情数组,然后选一个表情给card 同时加到dictionary中
+                emojiDictionary[card.identifier] = emojiChoices.remove(at: randomIndex);//remove at会返回这个移除的元素 这段逻辑相当于是随机消费上面那一串emoji表情数组,然后选一个表情给card 同时加到dictionary中,如果下次遇到相同的identifier的card直接从那里取就可以了
             }
         }
-        return emoji[card.identifier] ?? "?";//这句话等同于上面那一段 如果是nil返回?
+        return emojiDictionary[card.identifier] ?? "?";//这句话等同于上面那一段 如果是nil返回?
     }
     
     

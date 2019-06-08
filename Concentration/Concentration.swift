@@ -70,6 +70,18 @@ class Concentration{
             //cards+=[card,card]; 也可以写成这样
         }
         //todo:洗牌,如果不洗牌将会都是顺序的，失去了游戏性
+        var temp = Card()
+        var index = 0
+        for point in cards.indices{
+            let randomCase = Int(arc4random_uniform(UInt32(cards.count - point - 1)))
+            index = randomCase + point
+            if index != point{
+                temp = cards[point]
+                cards[point] = cards[index]
+                cards[index] = temp
+            }
+        }
+    
     }
     
     
